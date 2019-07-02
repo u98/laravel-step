@@ -1,0 +1,23 @@
+{
+    "name": "u98/step-step",
+    "description": "A package for my verify host",
+    "type": "laravel-package",
+    "authors": [
+        {
+            "name": "thinh",
+            "email": "uchinkaa@gmail.com"
+        }
+    ],
+    "autoload": {
+		"psr-4": {
+			"Uchin\\LaravelStep": "src/"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Uchin\\LaravelStep\\LaravelStepServiceProvider"
+			]
+		}
+	}
+}
