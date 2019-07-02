@@ -10,7 +10,7 @@
     ],
     "autoload": {
 		"psr-4": {
-			"Uchin\\LaravelStep": "src/"
+			"Uchin\\LaravelStep\\": "src/"
 		}
 	},
 	"extra": {
