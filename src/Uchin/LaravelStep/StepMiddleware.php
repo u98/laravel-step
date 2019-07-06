@@ -18,8 +18,7 @@ class RootMiddleware
     public function __construct()
     {
         $encrypt = new Encrypter(base64_decode(config('youtube.secret')), 'AES-256-CBC');
-        $url_to_parse = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : url('/');
-        $parse = parse_url($url_to_parse);
+        $parse = parse_url(config('app.url'));
         $host = str_replace('www.', '', $parse['host']);
         config(['app.en_ho' => $encrypt->encrypt($host)]);
         $verify_key = DB::table('settings')->where('key', 'verify_key')->first();
